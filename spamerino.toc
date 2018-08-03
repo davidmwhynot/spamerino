@@ -3,8 +3,6 @@
 ## Notes: Spams chat.
 ## Author: xdavesbanex
 ## Version: 0.1
-## SavedVariables: customerGenDB
+## SavedVariables: spamerinoDB
 
-embeds.xml
 spamerino.lua
-spamerino.xml
