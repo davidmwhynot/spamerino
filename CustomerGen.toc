@@ -1,0 +1,10 @@
+## Interface: 70100
+## Title: CustomerGen
+## Notes: Automatic Buyer Management and Spreadsheet Generator
+## Author: xdavesbanex
+## Version: 0.1b
+## SavedVariables: customerGenDB
+
+embeds.xml
+customerGen.lua
+customerGen.xml

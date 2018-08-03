@@ -1,0 +1,6 @@
+<Frame name="MyFrame1" parent="UIParent">
+  <Size x="50" y="50"/>
+  <Anchors>
+    <Anchor point="CENTER" relativePoint="CENTER"/>
+  </Anchors>
+</Frame>

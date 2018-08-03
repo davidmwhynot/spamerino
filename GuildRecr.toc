@@ -1,0 +1,10 @@
+## Interface: 70300
+## Title: spamerino
+## Notes: Spams chat.
+## Author: xdavesbanex
+## Version: 0.1
+## SavedVariables: customerGenDB
+
+embeds.xml
+spamerino.lua
+spamerino.xml
