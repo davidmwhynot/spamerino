@@ -86,7 +86,7 @@ function spamerinoInit()
 	-- local e = spamerinoOptions.panel:CreateFrame("editbox");
 	-- e:SetPoint("LEFT");
 	-- e:SetScript("OnEditFocusLost", function(self) spamerinoDebug("editfocuslost"); end);
-	local spamerinoEditBox = CreateFrame("EditBox", "spamerino_edit_box", spamerinoOptions.panel);
+	local spamerinoEditBox = CreateFrame("EditBox", "spamerino_edit_box", spamerinoOptions.panel, "InputBoxTemplate");
 	spamerinoEditBox:SetPoint("TOPLEFT", 200, -25);
 	spamerinoEditBox:SetAutoFocus();
 	spamerinoEditBox:SetWidth(60);
@@ -166,7 +166,7 @@ function spamerinoInit()
 		end
 	);
 
-	local spamerinoEditButton = CreateFrame('Button', "spamerino_resetBtn", spamerinoOptions.panel, "UIPanelButtonTemplate");
+	local spamerinoEditButton = CreateFrame('Button', "spamerino_editBtn", spamerinoOptions.panel, "UIPanelButtonTemplate");
 	spamerinoEditButton:SetID(1);
 	spamerinoEditButton:SetText('Edit Msg');
 	spamerinoEditButton:SetWidth(60);
