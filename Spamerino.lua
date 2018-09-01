@@ -42,8 +42,8 @@ function spamerinoInit()
 						print("sending msg: " .. spamerinoDB.msg);
 						print("... to channel " .. spamerinoDB.chnl);
 					else
-						spamerinoDebug('FORREAL sending msg: ' .. spamerinoDB.msg);
-						-- SendChatMessage(spamerinoDB.msg, "CHANNEL", nil, index);
+						-- spamerinoDebug('FORREAL sending msg: ' .. spamerinoDB.msg);
+						SendChatMessage(spamerinoDB.msg, "CHANNEL", nil, index);
 					end
 					count = 0;
 				end
@@ -209,9 +209,9 @@ local function spamerinoEventHandler(self, event, ...)
 			spamerinoDB.debug = true;
 			spamerinoDB.max = 2;
 			-- spamerinoDB.msg = "<Almost Awesome> 5/11M and top US leadership. Open recruitment for ALL CLASSES/SPECS. Raid times are Tue/Thu/Mon 8-11 Eastern. PST if interested.";
-			spamerinoDB.msg = "Default message.";
+			spamerinoDB.msg = "WTS Mythic 0 runs. PST for more info.";
 			spamerinoDB.chnl = "Trade - City";
-			spamerinoDB.time = 30;
+			spamerinoDB.time = 15;
 			spamerinoDB.test = true;
 			spamerinoDB.init = true;
 		end
