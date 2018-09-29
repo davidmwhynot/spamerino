@@ -77,6 +77,10 @@ function spamerinoInit()
 	local helloFS = spamerinoOptions.panel:CreateFontString(nil, "OVERLAY", "GameFontNormal");
 	helloFS:SetPoint("TOPLEFT", 20, -10);
 	helloFS:SetText("General");
+	-- add text
+	local currentMsg = spamerinoOptions.panel:CreateFontString(nil, "OVERLAY", "GameFontNormal");
+	currentMsg:SetPoint("TOPLEFT", 200, -10);
+	currentMsg:SetText(spamerinoDB.msg);
 
 	-- local b = spamerinoOptions.panel:CreateFrame("checkbutton");
 	-- b:SetPoint("TOP");
@@ -89,8 +93,8 @@ function spamerinoInit()
 	local spamerinoEditBox = CreateFrame("EditBox", "spamerino_edit_box", spamerinoOptions.panel, "InputBoxTemplate");
 	spamerinoEditBox:SetPoint("TOPLEFT", 200, -25);
 	spamerinoEditBox:SetAutoFocus();
-	spamerinoEditBox:SetWidth(60);
-	spamerinoEditBox:SetHeight(30);
+	spamerinoEditBox:SetWidth(160);
+	spamerinoEditBox:SetHeight(130);
 
 	local uniquealyzer = 1;
 	function createCheckbutton(parent, x_loc, y_loc, displayname)
@@ -175,6 +179,19 @@ function spamerinoInit()
 	spamerinoEditButton:SetScript("OnClick",
 		function()
 			spamerinoEditBox:SetFocus();
+		end
+	);
+
+	local spamerinoEditOkButton = CreateFrame('Button', "spamerino_editBtn", spamerinoOptions.panel, "UIPanelButtonTemplate");
+	spamerinoEditOkButton:SetID(1);
+	spamerinoEditOkButton:SetText('Confirm Msg');
+	spamerinoEditOkButton:SetWidth(120);
+	spamerinoEditOkButton:SetHeight(30);
+	spamerinoEditOkButton:SetPoint("TOPLEFT", 175, -100);
+	spamerinoEditOkButton:SetScript("OnClick",
+		function()
+			spamerinoDB.msg = spamerinoEditBox:GetText();
+			currentMsg:SetText(spamerinoDB.msg);
 		end
 	);
 
